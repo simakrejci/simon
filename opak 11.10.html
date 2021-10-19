@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=UTF8>
+</head>
+<html>
+    <body>
+        <p>Zkouška......</p>
+    </body>
+
+
+    <script>
+      // S rekurzí Dan //
+    // X=2 Y=1//
+    // x=5 y=3//
+    function součin22(x,y){
+        if (y == 0) return 0;
+        return x+součin22(x,y-1);   
+    }
+    console.log(součin22(5,2))
+   </script>
+
+    <script>
+        // Chybu jsme měli v tom, že jsme neměli definovanou hodnotu v proměnné vysledek, tam jsme dali vysledek =0; další chybu jsme měli
+        // v tom, že nám to bralo o jedno opakování navíc, takže jsme odstranili i<=y, ale dali jsme tam, i<y
+        function součin2(x,y){
+            var vysledek = 0;
+            for (var i=0; i<y; i++){
+                vysledek += x;
+            }
+            return vysledek;
+        }
+        console.log(součin2(5,6));
+    </script>
+
+
+    <script>
+        function pocetDlouhychSlov(veta) {
+        var pocet = 0;
+        var arrVeta = veta.split(" "); // Vezme to větu, v tý věte mi to za každou mezerou udělá cut, kdyby tam bylo a, tak mi to cutne za každým a
+        for (x of arrVeta) {
+                if (x.length > 2) {
+                    pocet++;
+            }
+    }
+    return pocet;
+}
+console.log(pocetDlouhychSlov("Ahoj jak se mas jsem doma."));
+    </script>
+</html>
+
+
+
+
+
