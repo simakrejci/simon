@@ -1,0 +1,40 @@
+
+<!--Můj kód, hledání minima-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Minimum</title>
+</head>
+<body>
+	<script >
+        function minimum(seznam) {
+            var minV = Infinity;
+            for (prvek of seznam) {
+                if (prvek < minV) {
+                    minV = prvek;
+                }
+            }
+            return minV;
+        }
+
+    var array = [790, 430, 680, 70, 53, 140, 300];
+    console.log(minimum(array));
+
+
+    function maximum(seznam) {
+        var maxV = -Infinity;
+            for (prvek of seznam) {
+                if (prvek > maxV) {
+                    maxV = prvek;
+                }
+            }
+        return maxV;
+    }
+
+    console.log(maximum(array));
+	</script>
+</body>
+</html>
+
+
