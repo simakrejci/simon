@@ -17,8 +17,11 @@ echo ("Připojilo se to....");
 //Vkládání dat z formuláře do databáze
 if(isset($_POST["submit"])) {
     $name = $_POST["name"];
+    echo $name;
     $lastname = $_POST["lastname"];
+    echo $lastname
     $sql = "INSERT INTO uzivatel (jmeno) VALUES ('"$name"')";
+    echo $sql;
     if (mysqli_query($sql)) {
         echo "Údaje byly přidány";
     } else {
